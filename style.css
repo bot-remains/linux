@@ -1,0 +1,214 @@
+@import "mocha.css";
+
+* {
+	border: none;
+	border-radius: 8px;
+   	font-family: "JetbrainsMono Nerd Font Mono" ;
+	font-size: 16px;
+}
+
+window#waybar {
+	background: transparent;
+}
+
+window#waybar.hidden {
+	opacity: 0.2;
+}
+
+#custom-launcher {
+	font-size: 24px;
+	margin-right: 8px;
+	padding: 0px 16px;
+	transition: none;
+    	color: #89DCEB;
+    	background: @base;
+}
+
+button:hover {
+    box-shadow: inherit;
+    text-shadow: inherit;
+    background: inherit;
+}
+
+#workspaces {
+	padding: 0px 8px;
+	margin-right: 8px;
+	background: @base;
+}
+
+#workspaces button {
+	padding: 0px;
+	color: @green;
+}
+
+#workspaces button:hover {
+	color: @red;
+}
+
+#cpu {
+	border-radius: 8px 0px 0px 8px;
+	padding: 0px 16px;
+	color: @text;
+	background: @base;
+}
+
+#memory{
+	border-radius: 0px 8px 8px 0px;
+	padding: 0px 16px;
+	padding-left: 0px;
+	margin-right: 8px;
+	color: @text;
+	background: @base;
+}
+
+#custom-update{
+	font-family: "Font Awesome 5 Free";
+	padding: 0px 16px;
+	padding-right: 22px;
+	margin-right: 8px;
+	color: @lavander;
+	background: @base;
+}
+
+#keyboard-state {
+	font-family: "Font Awesome 5 Free";
+	padding: 0px 16px;
+	margin-right: 8px;
+	color: @flamingo;
+	background: @base;
+}
+
+#clock {
+	padding: 0px 16px;
+	margin-right: 8px;
+    	color: #eff1f5;
+    	background: @base;
+}
+
+#custom-weather {
+	padding: 0px 16px;
+    	color: #eff1f5;
+    	background: @base;
+}
+
+#custom-wallpaper {
+	font-family: "Font Awesome 5 Free";
+	padding: 0px 16px;
+	margin-right: 8px;
+	color: @mauve; 
+	background: @base;
+}
+
+#temperature {
+	padding: 0px 16px;
+	margin-right: 8px;
+	color: @blue;
+	background: @base;
+}
+
+#temperature.gpu {
+	border-radius: 0px 8px 8px 0px;
+	padding: 0px 16px;
+	padding-left: 0px;
+	margin-right: 8px;
+	color: @blue;
+	background: @base;
+}
+
+#temperature.critical, #temperature.gpu.critical {
+	color: #d20f39;
+}
+
+#pulseaudio {
+	border-radius: 8px 0px 0px 8px;
+	padding: 0px 16px;
+	color: @rosewater;
+	background: @base;
+}
+
+#pulseaudio.muted {
+	padding: 0px 16px;
+	padding-right: 8px;
+}
+
+
+#backlight {	
+	border-radius: 0px 8px 8px 0px;
+	padding: 0px 16px;
+	padding-left: 2px;
+	margin-right: 8px;
+	color: @rosewater;
+	background: @base;
+}
+
+#network {
+	font-family: "Font Awesome 5 Free";
+	border-radius: 8px 0px 0px 8px;
+	padding: 0px 16px;
+	color: @yellow;
+	background: @base;
+}
+
+#bluetooth {
+	font-family: "Font Awesome 5 Free";
+	border-radius: 0px 8px 8px 0px;
+	padding: 0px 16px;
+	padding-left: 0px;
+	margin-right: 8px;
+	color: @yellow;
+	background: @base;
+}	
+
+#battery {
+	padding: 0px 16px;
+	padding-right: 24px;
+	margin-right: 8px;
+	color: @peach;
+	background: @base;
+}
+
+#battery.charging {
+	padding: 0px 16px;
+    	color: #eff1f5;
+    	background: #40a02b;
+}
+
+#battery.good:not(.charging) {
+	color: @peach;
+	background: @base;
+}
+
+#battery.warning:not(.charging) {
+	color: #eff1f5;
+    	background: #df8e1d;
+}
+
+#battery.low:not(.charging) {
+	color: #eff1f5; 
+	background: #d20f39;
+}
+
+#battery.critical:not(.charging) {
+    	color: #eff1f5;
+	background: #d20f39;
+    	animation-name: blink;
+    	animation-duration: 0.75s;
+    	animation-timing-function: linear;
+    	animation-iteration-count: infinite;
+    	animation-direction: alternate;
+}
+
+@keyframes blink {
+    to {
+	color: #d20f39;
+        background: #eff1f5;
+    }
+}
+
+#custom-powerctl {
+	font-family: "Font Awesome 5 Free";
+	padding: 0px 16px;
+	padding-right: 20px;
+	color: @green;
+	background: @base;
+}
